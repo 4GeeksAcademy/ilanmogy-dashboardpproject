@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<!-- Line above: tells the browser this is a modern HTML5 document (it must stay on the very first line) -->
+<!-- Root element of the page; lang="en" tells browsers and screen readers the content is in English -->
+<html lang="en">
+<!-- The head holds page settings that are not visible on screen -->
+<head>
+  <!-- Uses UTF-8 encoding so special characters (·, –, ▲, ▼, ⚠, →) display correctly -->
+  <meta charset="UTF-8">
+  <!-- Makes the page scale correctly on phones instead of showing a zoomed-out desktop view -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Text shown on the browser tab -->
+  <title>Creator Performance Dashboard</title>
+  <!-- Loads Tailwind CSS v4 from a CDN; it reads the class names on this page and generates the matching CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- End of the head -->
+</head>
+<!-- Visible page. bg-gray-50 = light gray background, text-gray-800 = dark gray default text, antialiased = smoother font rendering -->
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Top bar of the page. bg-white = white background, border-b = bottom border line, border-gray-200 = light gray border color -->
+  <header class="bg-white border-b border-gray-200">
+    <!-- Inner wrapper. max-w-7xl mx-auto = max width and centered; px-* = side padding that grows on sm/lg screens; py-5 = vertical padding;
+         flex flex-col gap-4 = stacks children vertically with space between; lg:flex-row = side by side on large screens;
+         lg:items-center = vertically centered; lg:justify-between = pushes children to opposite ends -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <!-- Left side: title group -->
+      <div>
+        <!-- Small label above the title: tiny text, semi-bold, uppercase, wide letter spacing, pink-purple color -->
+        <p class="text-xs font-semibold uppercase tracking-wider text-fuchsia-600">Creator Performance</p>
+        <!-- Main page title (h1): large, bold, almost-black text -->
+        <h1 class="text-2xl font-bold text-gray-900">Brand Partnerships Dashboard</h1>
+        <!-- Subtitle with influencer name, handle and the date range: small gray text -->
+        <p class="text-sm text-gray-500">Mia Rivera · @miarivera · Sep 14 – Oct 14, 2026 (vs. previous 30 days)</p>
+      <!-- End of title group -->
+      </div>
+    <!-- End of the header's inner wrapper -->
+    </div>
+  <!-- End of the header -->
+  </header>
+
+  <!-- Main content area: centered, max width, side padding, py-8 = top/bottom padding, space-y-12 = big gap between the 3 blocks -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <!-- ===================== BLOCK 1: MAIN OUTCOMES (KPIs) ===================== -->
+    <!-- Section for block 1; aria-labelledby links it to its heading for screen readers -->
+    <section aria-labelledby="outcomes-title">
+      <!-- Section heading group with mb-4 = space below -->
+      <div class="mb-4">
+        <!-- Block title (h2): large, bold, dark text. The id is what aria-labelledby points to -->
+        <h2 id="outcomes-title" class="text-lg font-bold text-gray-900">1 · Main outcomes</h2>
+        <!-- Short description of the block: small gray text -->
+        <p class="text-sm text-gray-500">Key indicators for the period</p>
+      <!-- End of heading group -->
+      </div>
+
+      <!-- KPI grid: 1 column on phones, 2 on medium screens (md), 4 on large screens (lg); gap-4 = space between cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <!-- REVENUE card. md:col-span-2 = takes 2 grid columns; bg-gradient-to-br from-fuchsia-600 to-indigo-600 = diagonal pink-to-indigo gradient;
+             text-white = white text; rounded-2xl = big rounded corners; p-5 = inner padding; shadow-sm = soft shadow -->
+        <article class="md:col-span-2 bg-gradient-to-br from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-5 shadow-sm">
+          <!-- Card label: tiny, uppercase, light pink text -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-fuchsia-100">Revenue</p>
+          <!-- Row with the main number on the left and the trend badge on the right; items-end = aligned at the bottom -->
+          <div class="mt-2 flex items-end justify-between gap-4">
+            <!-- Left group: metric name + value -->
+            <div>
+              <!-- Metric name -->
+              <p class="text-sm text-fuchsia-100">Commissions earned</p>
+              <!-- Big headline number: text-4xl = very large, bold -->
+              <p class="text-4xl font-bold">$18,420</p>
+            <!-- End of left group -->
+            </div>
+            <!-- Trend badge: bg-white/20 = white at 20% opacity, rounded pill shape -->
+            <span class="text-xs font-semibold bg-white/20 rounded-full px-2 py-1">▲ 15.8%</span>
+          <!-- End of the row -->
+          </div>
+          <!-- Description list (dl) of secondary metrics, laid out in a 3-column grid with margin on top -->
+          <dl class="hidden mt-5 grid grid-cols-3 gap-3 text-sm">
+            <!-- One metric pair -->
+            <div>
+              <!-- dt = metric name -->
+              <dt class="text-fuchsia-100">MRR (retainers)</dt>
+              <!-- dd = metric value, larger and semi-bold -->
+              <dd class="text-lg font-semibold">$4,500</dd>
+            <!-- End of metric pair -->
+            </div>
+            <!-- One metric pair -->
+            <div>
+              <!-- Metric name: average price of the products sold -->
+              <dt class="text-fuchsia-100">Avg. selling price</dt>
+              <!-- Metric value -->
+              <dd class="text-lg font-semibold">$60.36</dd>
+            <!-- End of metric pair -->
+            </div>
+            <!-- One metric pair -->
+            <div>
+              <!-- Metric name: commissions / number of sales -->
+              <dt class="text-fuchsia-100">Avg. commission / sale</dt>
+              <!-- Metric value -->
+              <dd class="text-lg font-semibold">$7.43</dd>
+            <!-- End of metric pair -->
+            </div>
+          <!-- End of secondary metrics -->
+          </dl>
+        <!-- End of Revenue card -->
+        </article>
+
+        <!-- EFFICIENCY card: spans 2 columns, white background, rounded, padded, soft shadow, thin very light border -->
+        <article class="md:col-span-2 bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card label: tiny uppercase gray text -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Efficiency</p>
+          <!-- Row with main number left and trend badge right -->
+          <div class="mt-2 flex items-end justify-between gap-4">
+            <!-- Left group -->
+            <div>
+              <!-- Metric name -->
+              <p class="text-sm text-gray-500">Return on ad spend (revenue / costs)</p>
+              <!-- Big headline number -->
+              <p class="text-4xl font-bold text-gray-900">3.0x</p>
+            <!-- End of left group -->
+            </div>
+            <!-- Positive trend badge: light green background, dark green text -->
+            <span class="text-xs font-semibold bg-green-100 text-green-700 rounded-full px-2 py-1">▲ 0.4x</span>
+          <!-- End of row -->
+          </div>
+          <!-- Secondary metrics: 2 columns on phones, 4 columns from the sm breakpoint up -->
+          <dl class="hidden mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+            <!-- Metric pair -->
+            <div>
+              <!-- Name: total money spent on ads -->
+              <dt class="text-gray-500">Ad costs</dt>
+              <!-- Value -->
+              <dd class="text-lg font-semibold text-gray-900">$6,150</dd>
+            <!-- End of pair -->
+            </div>
+            <!-- Metric pair -->
+            <div>
+              <!-- Name: ad costs / conversions -->
+              <dt class="text-gray-500">Cost / conversion</dt>
+              <!-- Value -->
+              <dd class="text-lg font-semibold text-gray-900">$2.48</dd>
+            <!-- End of pair -->
+            </div>
+            <!-- Metric pair -->
+            <div>
+              <!-- Name: (revenue - costs) / revenue -->
+              <dt class="text-gray-500">Margin</dt>
+              <!-- Value -->
+              <dd class="text-lg font-semibold text-gray-900">66.6%</dd>
+            <!-- End of pair -->
+            </div>
+            <!-- Metric pair -->
+            <div>
+              <!-- Name: average days from brand deal to campaign launch -->
+              <dt class="text-gray-500">Avg. lead time</dt>
+              <!-- Value -->
+              <dd class="text-lg font-semibold text-gray-900">9 days</dd>
+            <!-- End of pair -->
+            </div>
+          <!-- End of secondary metrics -->
+          </dl>
+        <!-- End of Efficiency card -->
+        </article>
+
+        <!-- VOLUME card: single column, white, rounded, padded, shadow, light border -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card label -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Volume</p>
+          <!-- List of metrics; mt-3 = top margin; space-y-3 = vertical gap between items -->
+          <ul class="mt-3 space-y-3">
+            <!-- Row: name on the left, value + trend on the right (flex + justify-between), vertically centered -->
+            <li class="flex items-center justify-between">
+              <!-- Metric name -->
+              <span class="text-sm text-gray-500">Sales</span>
+              <!-- Value (bold) followed by a green upward trend -->
+              <span class="flex items-center gap-2"><span class="font-semibold text-gray-900">2,480</span><span class="text-xs text-green-600">▲ 12.4%</span></span>
+            <!-- End of row -->
+            </li>
+            <!-- Row (same layout): unique people who saw the content -->
+            <li class="hidden flex items-center justify-between">
+              <!-- Metric name -->
+              <span class="text-sm text-gray-500">Reach</span>
+              <!-- Value + trend -->
+              <span class="flex items-center gap-2"><span class="font-semibold text-gray-900">1.24M</span><span class="text-xs text-green-600">▲ 8.1%</span></span>
+            <!-- End of row -->
+            </li>
+            <!-- Row (same layout): followers gained in the period -->
+            <li class="hidden flex items-center justify-between">
+              <!-- Metric name -->
+              <span class="text-sm text-gray-500">New followers</span>
+              <!-- Value + trend -->
+              <span class="flex items-center gap-2"><span class="font-semibold text-gray-900">14,350</span><span class="text-xs text-green-600">▲ 5.2%</span></span>
+            <!-- End of row -->
+            </li>
+            <!-- Row (same layout): followers who interacted at least once -->
+            <li class="hidden flex items-center justify-between">
+              <!-- Metric name -->
+              <span class="text-sm text-gray-500">Active audience</span>
+              <!-- Value + trend -->
+              <span class="flex items-center gap-2"><span class="font-semibold text-gray-900">312K</span><span class="text-xs text-green-600">▲ 3.0%</span></span>
+            <!-- End of row -->
+            </li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of Volume card -->
+        </article>
+
+        <!-- ENGAGEMENT card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card label -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Engagement</p>
+          <!-- Headline number: text-3xl = large, bold -->
+          <p class="mt-3 text-3xl font-bold text-gray-900">6.2%</p>
+          <!-- Metric name with a green trend; "pp" = percentage points -->
+          <p class="text-sm text-gray-500">Engagement rate <span class="text-green-600">▲ 0.4 pp</span></p>
+          <!-- Secondary metrics list -->
+          <ul class="hidden mt-3 space-y-2 text-sm">
+            <!-- Row: name left (gray), value right (bold) -->
+            <li class="flex justify-between"><span class="text-gray-500">Total interactions</span><span class="font-semibold">77.0K</span></li>
+            <!-- Row: conversions / reach -->
+            <li class="flex justify-between"><span class="text-gray-500">Conversion rate</span><span class="font-semibold">0.20%</span></li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of Engagement card -->
+        </article>
+
+        <!-- PERFORMANCE card -->
+        <article class="hidden bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card label -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Performance</p>
+          <!-- Headline number -->
+          <p class="mt-3 text-3xl font-bold text-gray-900">2,480</p>
+          <!-- Metric name with trend -->
+          <p class="text-sm text-gray-500">Total conversions <span class="text-green-600">▲ 12.4%</span></p>
+          <!-- Secondary metrics list -->
+          <ul class="mt-3 space-y-2 text-sm">
+            <!-- Row: clicks / reach -->
+            <li class="flex justify-between"><span class="text-gray-500">Click-through rate</span><span class="font-semibold">2.5%</span></li>
+            <!-- Row: conversions / reach -->
+            <li class="flex justify-between"><span class="text-gray-500">Conversions / reach</span><span class="font-semibold">0.20%</span></li>
+            <!-- Row: conversions / clicks -->
+            <li class="flex justify-between"><span class="text-gray-500">Conversions / clicks</span><span class="font-semibold">8.0%</span></li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of Performance card -->
+        </article>
+
+        <!-- RETENTION + SATISFACTION card -->
+        <article class="hidden bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- First label -->
+          <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Retention</p>
+          <!-- Retention metrics list -->
+          <ul class="mt-3 space-y-2 text-sm">
+            <!-- Row: % of followers lost; the green ▼ means churn went down, which is good -->
+            <li class="flex justify-between"><span class="text-gray-500">Follower churn</span><span class="font-semibold">1.8% <span class="text-xs text-green-600">▼ 0.3 pp</span></span></li>
+            <!-- Row: buyers who purchased more than once -->
+            <li class="flex justify-between"><span class="text-gray-500">Repeat buyers</span><span class="font-semibold">22%</span></li>
+            <!-- Row: carts that finished checkout -->
+            <li class="flex justify-between"><span class="text-gray-500">Checkout completion</span><span class="font-semibold">40%</span></li>
+            <!-- Row: brands that signed again (persistence) -->
+            <li class="flex justify-between"><span class="text-gray-500">Brands renewed</span><span class="font-semibold">4 of 5</span></li>
+          <!-- End of list -->
+          </ul>
+          <!-- Second label; mt-4 adds space above it -->
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-gray-500">Satisfaction</p>
+          <!-- Satisfaction metrics list -->
+          <ul class="mt-2 space-y-2 text-sm">
+            <!-- Row: Net Promoter Score from brand partners (-100 to +100) -->
+            <li class="flex justify-between"><span class="text-gray-500">Brand NPS</span><span class="font-semibold">+62</span></li>
+            <!-- Row: customer satisfaction score from the audience -->
+            <li class="flex justify-between"><span class="text-gray-500">Audience CSAT</span><span class="font-semibold">4.6 / 5</span></li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of Retention + Satisfaction card -->
+        </article>
+
+      <!-- End of KPI grid -->
+      </div>
+    <!-- End of block 1 -->
+    </section>
+
+    <details class="group">
+      <summary class="cursor-pointer list-none text-sm font-semibold text-gray-700 hover:text-gray-900">Explore performance details <span class="ml-1 text-gray-400 group-open:hidden">+</span><span class="ml-1 hidden text-gray-400 group-open:inline">−</span></summary>
+    <!-- ===================== BLOCK 2: DRIVERS ===================== -->
+    <!-- Section for block 2, labelled by its heading -->
+    <section aria-labelledby="drivers-title">
+      <!-- Heading group -->
+      <div class="mb-4">
+        <!-- Block title -->
+        <h2 id="drivers-title" class="text-lg font-bold text-gray-900">2 · Drivers</h2>
+        <!-- Block description -->
+        <p class="text-sm text-gray-500">What explains the results</p>
+      <!-- End of heading group -->
+      </div>
+
+      <!-- Drivers grid: 1 column on phones, 3 columns on large screens -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+        <!-- SALES FUNNEL card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title (h3): semi-bold, dark -->
+          <h3 class="font-semibold text-gray-900">Sales funnel</h3>
+          <!-- Note under the title: tiny light gray text, mb-4 = space below -->
+          <p class="text-xs text-gray-400 mb-4">Bar widths not to scale</p>
+          <!-- Ordered list because the funnel stages happen in order; space-y-2 = gap between items -->
+          <ol class="space-y-2">
+            <!-- Stage 1 -->
+            <li>
+              <!-- Bar: w-full = 100% wide; mx-auto = centered; dark indigo; white text; rounded; padded; flex puts label left and value right -->
+              <div class="w-full mx-auto bg-indigo-600 text-white rounded-lg px-3 py-2 flex justify-between text-sm"><span>Reach</span><span class="font-semibold">1.24M</span></div>
+            <!-- End of stage 1 -->
+            </li>
+            <!-- Step between stages: centered, tiny gray text showing the % that moved on -->
+            <li class="text-center text-xs text-gray-400">↓ 2.5% click-through</li>
+            <!-- Stage 2 -->
+            <li>
+              <!-- Bar: w-[80%] = custom 80% width (Tailwind arbitrary value), slightly lighter indigo -->
+              <div class="w-[80%] mx-auto bg-indigo-500 text-white rounded-lg px-3 py-2 flex justify-between text-sm"><span>Clicks</span><span class="font-semibold">31,000</span></div>
+            <!-- End of stage 2 -->
+            </li>
+            <!-- Step: % of clicks that added to cart -->
+            <li class="text-center text-xs text-gray-400">↓ 20% add to cart</li>
+            <!-- Stage 3 -->
+            <li>
+              <!-- Bar: 60% wide, lighter indigo -->
+              <div class="w-[60%] mx-auto bg-indigo-400 text-white rounded-lg px-3 py-2 flex justify-between text-sm"><span>Cart</span><span class="font-semibold">6,200</span></div>
+            <!-- End of stage 3 -->
+            </li>
+            <!-- Step: % of carts that completed checkout -->
+            <li class="text-center text-xs text-gray-400">↓ 40% checkout</li>
+            <!-- Stage 4 -->
+            <li>
+              <!-- Bar: 40% wide, pink to highlight the final outcome -->
+              <div class="w-[40%] mx-auto bg-fuchsia-500 text-white rounded-lg px-3 py-2 flex justify-between text-sm"><span>Sales</span><span class="font-semibold">2,480</span></div>
+            <!-- End of stage 4 -->
+            </li>
+          <!-- End of funnel list -->
+          </ol>
+        <!-- End of funnel card -->
+        </article>
+
+        <!-- PERFORMANCE BY PLATFORM card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Performance by platform</h3>
+          <!-- Card subtitle -->
+          <p class="text-xs text-gray-400 mb-4">Revenue and ROAS (revenue / costs)</p>
+          <!-- List of platforms; space-y-4 = gap between platforms -->
+          <ul class="space-y-4 text-sm">
+            <!-- Instagram -->
+            <li>
+              <!-- Label row: platform name left; revenue and ROAS right -->
+              <div class="flex justify-between"><span class="font-medium">Instagram</span><span class="text-gray-500">$7,800 · <span class="font-semibold text-gray-900">3.25x</span></span></div>
+              <!-- Revenue bar: gray track (h-2 = 8px tall) with a pink fill; w-full because Instagram has the highest revenue -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-full bg-pink-500 rounded-full"></div></div>
+              <!-- ROAS bar: thinner track (h-1.5) with a lighter fill; 87% = 3.25 / 3.73 (best ROAS) -->
+              <div class="mt-1 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 w-[87%] bg-pink-300 rounded-full"></div></div>
+            <!-- End of Instagram -->
+            </li>
+            <!-- TikTok -->
+            <li>
+              <!-- Label row plus a small green "Best ROAS" badge (text-[10px] = custom 10px font size) -->
+              <div class="flex justify-between"><span class="font-medium">TikTok <span class="ml-1 text-[10px] font-semibold uppercase bg-green-100 text-green-700 rounded px-1.5 py-0.5">Best ROAS</span></span><span class="text-gray-500">$6,150 · <span class="font-semibold text-gray-900">3.73x</span></span></div>
+              <!-- Revenue bar: 79% = 6,150 / 7,800 -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[79%] bg-gray-900 rounded-full"></div></div>
+              <!-- ROAS bar: full width because TikTok has the best ROAS -->
+              <div class="mt-1 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 w-full bg-gray-400 rounded-full"></div></div>
+            <!-- End of TikTok -->
+            </li>
+            <!-- YouTube -->
+            <li>
+              <!-- Label row -->
+              <div class="flex justify-between"><span class="font-medium">YouTube</span><span class="text-gray-500">$3,520 · <span class="font-semibold text-gray-900">2.35x</span></span></div>
+              <!-- Revenue bar: 45% of the top revenue -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[45%] bg-red-500 rounded-full"></div></div>
+              <!-- ROAS bar: 63% of the best ROAS -->
+              <div class="mt-1 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 w-[63%] bg-red-300 rounded-full"></div></div>
+            <!-- End of YouTube -->
+            </li>
+            <!-- Pinterest -->
+            <li>
+              <!-- Label row -->
+              <div class="flex justify-between"><span class="font-medium">Pinterest</span><span class="text-gray-500">$950 · <span class="font-semibold text-gray-900">1.58x</span></span></div>
+              <!-- Revenue bar: 12% of the top revenue -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[12%] bg-rose-700 rounded-full"></div></div>
+              <!-- ROAS bar: 42% of the best ROAS -->
+              <div class="mt-1 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 w-[42%] bg-rose-300 rounded-full"></div></div>
+            <!-- End of Pinterest -->
+            </li>
+          <!-- End of platform list -->
+          </ul>
+          <!-- Legend explaining the two bar types -->
+          <p class="mt-4 text-xs text-gray-400">Thick bar = revenue · thin bar = ROAS</p>
+        <!-- End of platform card -->
+        </article>
+
+        <!-- QUALITY card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Quality</h3>
+          <!-- Card subtitle -->
+          <p class="text-xs text-gray-400 mb-4">Lead and content quality</p>
+          <!-- List of quality metrics with larger gaps (space-y-5) -->
+          <ul class="space-y-5 text-sm">
+            <!-- Metric 1 -->
+            <li>
+              <!-- Name left, value right -->
+              <div class="flex justify-between"><span>Qualified lead ratio</span><span class="font-semibold">34%</span></div>
+              <!-- Progress bar: gray track, amber fill at 34% width -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[34%] bg-amber-500 rounded-full"></div></div>
+              <!-- Explanation; &gt; is the HTML code for the ">" symbol -->
+              <p class="mt-1 text-xs text-gray-400">Clicks that viewed the product page &gt; 30s</p>
+            <!-- End of metric 1 -->
+            </li>
+            <!-- Metric 2 -->
+            <li>
+              <!-- Name and value -->
+              <div class="flex justify-between"><span>Attendance rate</span><span class="font-semibold">58%</span></div>
+              <!-- Progress bar: sky-blue fill at 58% -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[58%] bg-sky-500 rounded-full"></div></div>
+              <!-- Explanation -->
+              <p class="mt-1 text-xs text-gray-400">Registered vs. attended live shopping sessions</p>
+            <!-- End of metric 2 -->
+            </li>
+            <!-- Metric 3 -->
+            <li>
+              <!-- Name and value -->
+              <div class="flex justify-between"><span>Pass rate</span><span class="font-semibold">92%</span></div>
+              <!-- Progress bar: green fill at 92% -->
+              <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[92%] bg-green-500 rounded-full"></div></div>
+              <!-- Explanation -->
+              <p class="mt-1 text-xs text-gray-400">Content approved by brands on first submission</p>
+            <!-- End of metric 3 -->
+            </li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of Quality card -->
+        </article>
+
+        <!-- PERFORMANCE BY PRODUCT card; lg:col-span-2 = takes 2 of the 3 columns on large screens -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 lg:col-span-2">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Performance by product</h3>
+          <!-- Card subtitle -->
+          <p class="text-xs text-gray-400 mb-4">Commissions generated and conversion rate (conversions / clicks)</p>
+          <!-- Inner grid: 1 column on phones, 2 columns from md; gap-x-8 = horizontal gap, gap-y-4 = vertical gap -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+            <!-- Left column: commissions -->
+            <div>
+              <!-- Column label -->
+              <p class="text-xs font-semibold uppercase text-gray-500 mb-2">Commissions</p>
+              <!-- List of products -->
+              <ul class="space-y-3">
+                <!-- Product row -->
+                <li>
+                  <!-- Product name and commission -->
+                  <div class="flex justify-between"><span>Glow Serum</span><span class="font-semibold">$6,900</span></div>
+                  <!-- Bar: full width because it's the top earner -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-full bg-fuchsia-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and commission -->
+                  <div class="flex justify-between"><span>Wireless Earbuds</span><span class="font-semibold">$4,560</span></div>
+                  <!-- Bar: 66% of the top earner -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[66%] bg-fuchsia-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and commission -->
+                  <div class="flex justify-between"><span>Yoga Mat Pro</span><span class="font-semibold">$3,240</span></div>
+                  <!-- Bar: 47% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[47%] bg-fuchsia-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and commission -->
+                  <div class="flex justify-between"><span>Matte Lipstick Set</span><span class="font-semibold">$2,300</span></div>
+                  <!-- Bar: 33% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[33%] bg-fuchsia-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and commission -->
+                  <div class="flex justify-between"><span>Protein Blend</span><span class="font-semibold">$1,420</span></div>
+                  <!-- Bar: 21% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[21%] bg-fuchsia-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+              <!-- End of list -->
+              </ul>
+            <!-- End of left column -->
+            </div>
+            <!-- Right column: conversion rate -->
+            <div>
+              <!-- Column label -->
+              <p class="text-xs font-semibold uppercase text-gray-500 mb-2">Conversion rate</p>
+              <!-- List of products -->
+              <ul class="space-y-3">
+                <!-- Product row -->
+                <li>
+                  <!-- Name and conversion rate -->
+                  <div class="flex justify-between"><span>Glow Serum</span><span class="font-semibold">10.0%</span></div>
+                  <!-- Bar: full width = best rate (10%) -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-full bg-indigo-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and conversion rate -->
+                  <div class="flex justify-between"><span>Wireless Earbuds</span><span class="font-semibold">8.0%</span></div>
+                  <!-- Bar: 80% (8 / 10) -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[80%] bg-indigo-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and conversion rate -->
+                  <div class="flex justify-between"><span>Yoga Mat Pro</span><span class="font-semibold">7.0%</span></div>
+                  <!-- Bar: 70% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[70%] bg-indigo-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and conversion rate -->
+                  <div class="flex justify-between"><span>Matte Lipstick Set</span><span class="font-semibold">8.0%</span></div>
+                  <!-- Bar: 80% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[80%] bg-indigo-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+                <!-- Product row -->
+                <li>
+                  <!-- Name and conversion rate -->
+                  <div class="flex justify-between"><span>Protein Blend</span><span class="font-semibold">5.0%</span></div>
+                  <!-- Bar: 50% -->
+                  <div class="mt-1 h-2 bg-gray-100 rounded-full"><div class="h-2 w-[50%] bg-indigo-500 rounded-full"></div></div>
+                <!-- End of row -->
+                </li>
+              <!-- End of list -->
+              </ul>
+            <!-- End of right column -->
+            </div>
+          <!-- End of inner grid -->
+          </div>
+        <!-- End of product card -->
+        </article>
+
+        <!-- ENGAGEMENT RATE card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Engagement rate</h3>
+          <!-- Subtitle: formula and bar scale (a full bar = 10%) -->
+          <p class="text-xs text-gray-400 mb-4">Interactions / reach (scale 0–10%)</p>
+          <!-- Sub-label -->
+          <p class="text-xs font-semibold uppercase text-gray-500 mb-2">By platform</p>
+          <!-- Platform list -->
+          <ul class="space-y-2 text-sm">
+            <!-- Row as a 3-column grid: grid-cols-[5.5rem_1fr_3rem] = fixed name column, flexible bar column, fixed value column -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span>TikTok</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[79%] bg-emerald-500 rounded-full"></div></div><span class="text-right font-semibold">7.9%</span></li>
+            <!-- Same layout: Instagram 6.5% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span>Instagram</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[65%] bg-emerald-500 rounded-full"></div></div><span class="text-right font-semibold">6.5%</span></li>
+            <!-- Same layout: YouTube 4.1% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span>YouTube</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[41%] bg-emerald-500 rounded-full"></div></div><span class="text-right font-semibold">4.1%</span></li>
+            <!-- Same layout: Pinterest 2.2% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span>Pinterest</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[22%] bg-emerald-500 rounded-full"></div></div><span class="text-right font-semibold">2.2%</span></li>
+          <!-- End of platform list -->
+          </ul>
+          <!-- Sub-label with extra top margin (mt-5) -->
+          <p class="text-xs font-semibold uppercase text-gray-500 mt-5 mb-2">By product</p>
+          <!-- Product list -->
+          <ul class="space-y-2 text-sm">
+            <!-- Same 3-column layout; truncate = cuts long names with "…" so they fit -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span class="truncate">Glow Serum</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[74%] bg-teal-500 rounded-full"></div></div><span class="text-right font-semibold">7.4%</span></li>
+            <!-- Lipstick Set 6.9% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span class="truncate">Lipstick Set</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[69%] bg-teal-500 rounded-full"></div></div><span class="text-right font-semibold">6.9%</span></li>
+            <!-- Yoga Mat Pro 6.8% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span class="truncate">Yoga Mat Pro</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[68%] bg-teal-500 rounded-full"></div></div><span class="text-right font-semibold">6.8%</span></li>
+            <!-- Earbuds 5.1% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span class="truncate">Earbuds</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[51%] bg-teal-500 rounded-full"></div></div><span class="text-right font-semibold">5.1%</span></li>
+            <!-- Protein Blend 3.9% -->
+            <li class="grid grid-cols-[5.5rem_1fr_3rem] items-center gap-2"><span class="truncate">Protein Blend</span><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 w-[39%] bg-teal-500 rounded-full"></div></div><span class="text-right font-semibold">3.9%</span></li>
+          <!-- End of product list -->
+          </ul>
+        <!-- End of engagement rate card -->
+        </article>
+
+        <!-- ACTIVITY card: full width on lg (col-span-3), 1 column on xl -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 lg:col-span-3 xl:col-span-1">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Activity</h3>
+          <!-- Subtitle with total pieces of content -->
+          <p class="text-xs text-gray-400 mb-4">Content published · 219 pieces</p>
+          <!-- Wrapper that lets the table scroll sideways on small screens -->
+          <div class="overflow-x-auto">
+            <!-- Table at full width with small text -->
+            <table class="w-full text-sm">
+              <!-- Table header: tiny uppercase gray text -->
+              <thead class="text-xs text-gray-500 uppercase">
+                <!-- Header row; scope="col" tells screen readers each th labels a column; text-left/right aligns text -->
+                <tr><th scope="col" class="text-left py-2">Platform</th><th scope="col" class="text-right">Posts</th><th scope="col" class="text-right">Stories</th><th scope="col" class="text-right">Reels / Shorts</th><th scope="col" class="text-right">Videos</th></tr>
+              <!-- End of header -->
+              </thead>
+              <!-- Table body; divide-y = thin line between rows -->
+              <tbody class="divide-y divide-gray-100">
+                <!-- Instagram row; scope="row" marks the platform cell as the row label; "—" in light gray = not applicable -->
+                <tr><th scope="row" class="text-left font-medium py-2">Instagram</th><td class="text-right">18</td><td class="text-right">64</td><td class="text-right">22</td><td class="text-right text-gray-300">—</td></tr>
+                <!-- TikTok row -->
+                <tr><th scope="row" class="text-left font-medium py-2">TikTok</th><td class="text-right text-gray-300">—</td><td class="text-right">12</td><td class="text-right text-gray-300">—</td><td class="text-right">41</td></tr>
+                <!-- YouTube row -->
+                <tr><th scope="row" class="text-left font-medium py-2">YouTube</th><td class="text-right">4</td><td class="text-right text-gray-300">—</td><td class="text-right">14</td><td class="text-right">6</td></tr>
+                <!-- Pinterest row -->
+                <tr><th scope="row" class="text-left font-medium py-2">Pinterest</th><td class="text-right">35</td><td class="text-right text-gray-300">—</td><td class="text-right text-gray-300">—</td><td class="text-right">3</td></tr>
+              <!-- End of body -->
+              </tbody>
+            <!-- End of table -->
+            </table>
+          <!-- End of scroll wrapper -->
+          </div>
+        <!-- End of activity card -->
+        </article>
+
+        <!-- ENGAGEMENT BREAKDOWN card: full width on lg, 2 columns on xl -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 lg:col-span-3 xl:col-span-2">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Engagement breakdown</h3>
+          <!-- Subtitle -->
+          <p class="text-xs text-gray-400 mb-4">Interactions by type and platform</p>
+          <!-- Horizontal scroll wrapper -->
+          <div class="overflow-x-auto">
+            <!-- Table -->
+            <table class="w-full text-sm">
+              <!-- Header -->
+              <thead class="text-xs text-gray-500 uppercase">
+                <!-- Column names -->
+                <tr><th scope="col" class="text-left py-2">Platform</th><th scope="col" class="text-right">Likes</th><th scope="col" class="text-right">Comments</th><th scope="col" class="text-right">Shares</th><th scope="col" class="text-right">Saves</th><th scope="col" class="text-right">Total</th></tr>
+              <!-- End of header -->
+              </thead>
+              <!-- Body with row dividers -->
+              <tbody class="divide-y divide-gray-100">
+                <!-- Instagram row; the green bold cell highlights the most saves -->
+                <tr><th scope="row" class="text-left font-medium py-2">Instagram</th><td class="text-right">24,100</td><td class="text-right">3,200</td><td class="text-right">2,400</td><td class="text-right font-semibold text-emerald-600">4,100</td><td class="text-right font-semibold">33,800</td></tr>
+                <!-- TikTok row; green bold cell highlights the most shares -->
+                <tr><th scope="row" class="text-left font-medium py-2">TikTok</th><td class="text-right">22,600</td><td class="text-right">2,900</td><td class="text-right font-semibold text-emerald-600">4,800</td><td class="text-right">2,100</td><td class="text-right font-semibold">32,400</td></tr>
+                <!-- YouTube row -->
+                <tr><th scope="row" class="text-left font-medium py-2">YouTube</th><td class="text-right">6,900</td><td class="text-right">1,100</td><td class="text-right">400</td><td class="text-right">200</td><td class="text-right font-semibold">8,600</td></tr>
+                <!-- Pinterest row -->
+                <tr><th scope="row" class="text-left font-medium py-2">Pinterest</th><td class="text-right">900</td><td class="text-right">100</td><td class="text-right">300</td><td class="text-right">900</td><td class="text-right font-semibold">2,200</td></tr>
+              <!-- End of body -->
+              </tbody>
+              <!-- Table footer for totals: thicker top border (border-t-2), all bold -->
+              <tfoot class="border-t-2 border-gray-200 font-semibold">
+                <!-- Totals row (sum of each column) -->
+                <tr><th scope="row" class="text-left py-2">Total</th><td class="text-right">54,500</td><td class="text-right">7,300</td><td class="text-right">7,900</td><td class="text-right">7,300</td><td class="text-right">77,000</td></tr>
+              <!-- End of footer -->
+              </tfoot>
+            <!-- End of table -->
+            </table>
+          <!-- End of scroll wrapper -->
+          </div>
+        <!-- End of engagement breakdown card -->
+        </article>
+
+      <!-- End of drivers grid -->
+      </div>
+    <!-- End of block 2 -->
+    </section>
+    </details>
+
+    <!-- ===================== BLOCK 3: OPERATIONAL DETAILS ===================== -->
+    <details class="group">
+      <summary class="cursor-pointer list-none text-sm font-semibold text-gray-700 hover:text-gray-900">Explore operational reports <span class="ml-1 text-gray-400 group-open:hidden">+</span><span class="ml-1 hidden text-gray-400 group-open:inline">−</span></summary>
+    <!-- Section for block 3; space-y-4 = gap between alerts, tables and lists -->
+    <section aria-labelledby="ops-title" class="space-y-4">
+      <!-- Heading group -->
+      <div>
+        <!-- Block title -->
+        <h2 id="ops-title" class="text-lg font-bold text-gray-900">3 · Operational details</h2>
+        <!-- Block description -->
+        <p class="text-sm text-gray-500">Tables, alerts and lists</p>
+      <!-- End of heading group -->
+      </div>
+
+      <!-- ALERTS grid: 1/2/4 columns depending on screen size. role="list" + aria-label make screen readers announce it as a list of alerts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" role="list" aria-label="Alerts">
+        <!-- Red alert card: border-l-4 = thick left border used as a color stripe -->
+        <div role="listitem" class="bg-white rounded-xl p-4 shadow-sm border-l-4 border-red-500">
+          <!-- Alert type in red -->
+          <p class="text-xs font-semibold uppercase text-red-600">▼ Sharp drop</p>
+          <!-- Alert headline -->
+          <p class="mt-1 text-sm font-medium text-gray-900">Pinterest conversion rate fell 38%</p>
+          <!-- Alert detail -->
+          <p class="text-xs text-gray-500">0.24% → 0.15% week over week</p>
+        <!-- End of alert -->
+        </div>
+        <!-- Green alert card (positive spike) -->
+        <div role="listitem" class="bg-white rounded-xl p-4 shadow-sm border-l-4 border-green-500">
+          <!-- Alert type in green -->
+          <p class="text-xs font-semibold uppercase text-green-600">▲ Spike</p>
+          <!-- Headline -->
+          <p class="mt-1 text-sm font-medium text-gray-900">TikTok conversions +64% on Oct 9</p>
+          <!-- Detail -->
+          <p class="text-xs text-gray-500">"Morning Flow" duet trend went viral</p>
+        <!-- End of alert -->
+        </div>
+        <!-- Amber alert card (anomaly) -->
+        <div role="listitem" class="bg-white rounded-xl p-4 shadow-sm border-l-4 border-amber-500">
+          <!-- Alert type in amber -->
+          <p class="text-xs font-semibold uppercase text-amber-600">⚠ Anomaly</p>
+          <!-- Headline -->
+          <p class="mt-1 text-sm font-medium text-gray-900">YouTube CTR 4.8% on Oct 12</p>
+          <!-- Detail -->
+          <p class="text-xs text-gray-500">vs. 1.9% average, check for bot traffic</p>
+        <!-- End of alert -->
+        </div>
+        <!-- Amber alert card (underperformance) -->
+        <div role="listitem" class="bg-white rounded-xl p-4 shadow-sm border-l-4 border-amber-500">
+          <!-- Alert type -->
+          <p class="text-xs font-semibold uppercase text-amber-600">⚠ Underperforming</p>
+          <!-- Headline -->
+          <p class="mt-1 text-sm font-medium text-gray-900">Protein Blend ROAS below 2x</p>
+          <!-- Detail -->
+          <p class="text-xs text-gray-500">3rd week in a row (1.78x)</p>
+        <!-- End of alert -->
+        </div>
+      <!-- End of alerts grid -->
+      </div>
+
+      <!-- PRODUCTS TABLE card (no padding on the card itself; inner parts add their own) -->
+      <article class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <!-- Title area: p-5 padding but pb-0 removes the bottom padding -->
+        <div class="p-5 pb-0">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Products</h3>
+          <!-- Formula note -->
+          <p class="text-xs text-gray-400">ROAS = commissions / ad costs</p>
+        <!-- End of title area -->
+        </div>
+        <!-- Scroll wrapper with padding -->
+        <div class="overflow-x-auto p-5">
+          <!-- Table; whitespace-nowrap keeps each cell on one line (the wrapper scrolls instead) -->
+          <table class="w-full text-sm whitespace-nowrap">
+            <!-- Header with a light gray background -->
+            <thead class="text-xs text-gray-500 uppercase bg-gray-50">
+              <!-- Header row -->
+              <tr>
+                <!-- Column: product name (left aligned); px-3 py-2 = cell padding -->
+                <th scope="col" class="text-left px-3 py-2">Product</th>
+                <!-- Column: brand -->
+                <th scope="col" class="text-left px-3 py-2">Brand</th>
+                <!-- Column: product price (numbers are right aligned so digits line up) -->
+                <th scope="col" class="text-right px-3 py-2">Price</th>
+                <!-- Column: commission percentage -->
+                <th scope="col" class="text-right px-3 py-2">Commission</th>
+                <!-- Column: number of sales -->
+                <th scope="col" class="text-right px-3 py-2">Conversions</th>
+                <!-- Column: conversions / clicks -->
+                <th scope="col" class="text-right px-3 py-2">Conv. rate</th>
+                <!-- Column: money earned -->
+                <th scope="col" class="text-right px-3 py-2">Commissions earned</th>
+                <!-- Column: money spent on ads -->
+                <th scope="col" class="text-right px-3 py-2">Ad costs</th>
+                <!-- Column: return on ad spend -->
+                <th scope="col" class="text-right px-3 py-2">ROAS</th>
+              <!-- End of header row -->
+              </tr>
+            <!-- End of header -->
+            </thead>
+            <!-- Body with dividers between rows -->
+            <tbody class="divide-y divide-gray-100">
+              <!-- Glow Serum row -->
+              <tr>
+                <!-- Product name (row label) -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Glow Serum</th>
+                <!-- Brand in gray -->
+                <td class="px-3 py-2 text-gray-500">Lumière Skin</td>
+                <!-- Price -->
+                <td class="text-right px-3 py-2">$50.00</td>
+                <!-- Commission % -->
+                <td class="text-right px-3 py-2">15%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">920</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">10.0%</td>
+                <!-- Commissions earned (bold) -->
+                <td class="text-right px-3 py-2 font-semibold">$6,900</td>
+                <!-- Ad costs -->
+                <td class="text-right px-3 py-2">$1,800</td>
+                <!-- ROAS in a green pill (good result) -->
+                <td class="text-right px-3 py-2"><span class="bg-green-100 text-green-700 rounded-full px-2 py-0.5 font-semibold">3.83x</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Wireless Earbuds row (same column order as above) -->
+              <tr>
+                <!-- Product name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Wireless Earbuds</th>
+                <!-- Brand -->
+                <td class="px-3 py-2 text-gray-500">Pulse Audio</td>
+                <!-- Price -->
+                <td class="text-right px-3 py-2">$120.00</td>
+                <!-- Commission % -->
+                <td class="text-right px-3 py-2">10%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">380</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">8.0%</td>
+                <!-- Commissions earned -->
+                <td class="text-right px-3 py-2 font-semibold">$4,560</td>
+                <!-- Ad costs -->
+                <td class="text-right px-3 py-2">$1,400</td>
+                <!-- ROAS in a green pill -->
+                <td class="text-right px-3 py-2"><span class="bg-green-100 text-green-700 rounded-full px-2 py-0.5 font-semibold">3.26x</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Yoga Mat Pro row -->
+              <tr>
+                <!-- Product name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Yoga Mat Pro</th>
+                <!-- Brand -->
+                <td class="px-3 py-2 text-gray-500">Zenfit</td>
+                <!-- Price -->
+                <td class="text-right px-3 py-2">$60.00</td>
+                <!-- Commission % -->
+                <td class="text-right px-3 py-2">10%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">540</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">7.0%</td>
+                <!-- Commissions earned -->
+                <td class="text-right px-3 py-2 font-semibold">$3,240</td>
+                <!-- Ad costs -->
+                <td class="text-right px-3 py-2">$1,150</td>
+                <!-- ROAS in a gray pill (average result) -->
+                <td class="text-right px-3 py-2"><span class="bg-gray-100 text-gray-700 rounded-full px-2 py-0.5 font-semibold">2.82x</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Matte Lipstick Set row -->
+              <tr>
+                <!-- Product name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Matte Lipstick Set</th>
+                <!-- Brand -->
+                <td class="px-3 py-2 text-gray-500">Velvet Co.</td>
+                <!-- Price -->
+                <td class="text-right px-3 py-2">$25.00</td>
+                <!-- Commission % -->
+                <td class="text-right px-3 py-2">20%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">460</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">8.0%</td>
+                <!-- Commissions earned -->
+                <td class="text-right px-3 py-2 font-semibold">$2,300</td>
+                <!-- Ad costs -->
+                <td class="text-right px-3 py-2">$1,000</td>
+                <!-- ROAS in a gray pill -->
+                <td class="text-right px-3 py-2"><span class="bg-gray-100 text-gray-700 rounded-full px-2 py-0.5 font-semibold">2.30x</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Protein Blend row -->
+              <tr>
+                <!-- Product name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Protein Blend</th>
+                <!-- Brand -->
+                <td class="px-3 py-2 text-gray-500">NutriPeak</td>
+                <!-- Price -->
+                <td class="text-right px-3 py-2">$78.90</td>
+                <!-- Commission % -->
+                <td class="text-right px-3 py-2">10%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">180</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">5.0%</td>
+                <!-- Commissions earned -->
+                <td class="text-right px-3 py-2 font-semibold">$1,420</td>
+                <!-- Ad costs -->
+                <td class="text-right px-3 py-2">$800</td>
+                <!-- ROAS in a red pill (poor result) -->
+                <td class="text-right px-3 py-2"><span class="bg-red-100 text-red-700 rounded-full px-2 py-0.5 font-semibold">1.78x</span></td>
+              <!-- End of row -->
+              </tr>
+            <!-- End of body -->
+            </tbody>
+            <!-- Totals footer: thick top border, bold -->
+            <tfoot class="border-t-2 border-gray-200 font-semibold">
+              <!-- Totals row -->
+              <tr>
+                <!-- "Total" label; colspan="4" makes it stretch across the first 4 columns -->
+                <th scope="row" class="text-left px-3 py-2" colspan="4">Total</th>
+                <!-- Total conversions -->
+                <td class="text-right px-3 py-2">2,480</td>
+                <!-- Overall conversion rate -->
+                <td class="text-right px-3 py-2">8.0%</td>
+                <!-- Total commissions -->
+                <td class="text-right px-3 py-2">$18,420</td>
+                <!-- Total ad costs -->
+                <td class="text-right px-3 py-2">$6,150</td>
+                <!-- Overall ROAS -->
+                <td class="text-right px-3 py-2">3.00x</td>
+              <!-- End of totals row -->
+              </tr>
+            <!-- End of footer -->
+            </tfoot>
+          <!-- End of table -->
+          </table>
+        <!-- End of scroll wrapper -->
+        </div>
+      <!-- End of products card -->
+      </article>
+
+      <!-- PLATFORMS TABLE card -->
+      <article class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <!-- Title area -->
+        <div class="p-5 pb-0">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Platforms</h3>
+          <!-- Note -->
+          <p class="text-xs text-gray-400">Leader per metric highlighted in the last row</p>
+        <!-- End of title area -->
+        </div>
+        <!-- Scroll wrapper -->
+        <div class="overflow-x-auto p-5">
+          <!-- Table -->
+          <table class="w-full text-sm whitespace-nowrap">
+            <!-- Header -->
+            <thead class="text-xs text-gray-500 uppercase bg-gray-50">
+              <!-- Header row -->
+              <tr>
+                <!-- Column: platform name -->
+                <th scope="col" class="text-left px-3 py-2">Platform</th>
+                <!-- Column: reach -->
+                <th scope="col" class="text-right px-3 py-2">Reach</th>
+                <!-- Column: likes + comments + shares + saves -->
+                <th scope="col" class="text-right px-3 py-2">Interactions</th>
+                <!-- Column: engagement rate -->
+                <th scope="col" class="text-right px-3 py-2">Eng. rate</th>
+                <!-- Column: conversions -->
+                <th scope="col" class="text-right px-3 py-2">Conversions</th>
+                <!-- Column: conversions / reach -->
+                <th scope="col" class="text-right px-3 py-2">Conv. rate</th>
+                <!-- Column: revenue -->
+                <th scope="col" class="text-right px-3 py-2">Revenue</th>
+                <!-- Column: costs -->
+                <th scope="col" class="text-right px-3 py-2">Costs</th>
+                <!-- Column: ROAS -->
+                <th scope="col" class="text-right px-3 py-2">ROAS</th>
+              <!-- End of header row -->
+              </tr>
+            <!-- End of header -->
+            </thead>
+            <!-- Body -->
+            <tbody class="divide-y divide-gray-100">
+              <!-- Instagram row -->
+              <tr>
+                <!-- Platform name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Instagram</th>
+                <!-- Reach -->
+                <td class="text-right px-3 py-2">520K</td>
+                <!-- Interactions -->
+                <td class="text-right px-3 py-2">33.8K</td>
+                <!-- Engagement rate -->
+                <td class="text-right px-3 py-2">6.5%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">1,040</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">0.20%</td>
+                <!-- Revenue -->
+                <td class="text-right px-3 py-2">$7,800</td>
+                <!-- Costs -->
+                <td class="text-right px-3 py-2">$2,400</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2">3.25x</td>
+              <!-- End of row -->
+              </tr>
+              <!-- TikTok row (same column order) -->
+              <tr>
+                <!-- Platform name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">TikTok</th>
+                <!-- Reach -->
+                <td class="text-right px-3 py-2">410K</td>
+                <!-- Interactions -->
+                <td class="text-right px-3 py-2">32.4K</td>
+                <!-- Engagement rate -->
+                <td class="text-right px-3 py-2">7.9%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">820</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">0.20%</td>
+                <!-- Revenue -->
+                <td class="text-right px-3 py-2">$6,150</td>
+                <!-- Costs -->
+                <td class="text-right px-3 py-2">$1,650</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2">3.73x</td>
+              <!-- End of row -->
+              </tr>
+              <!-- YouTube row -->
+              <tr>
+                <!-- Platform name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">YouTube</th>
+                <!-- Reach -->
+                <td class="text-right px-3 py-2">210K</td>
+                <!-- Interactions -->
+                <td class="text-right px-3 py-2">8.6K</td>
+                <!-- Engagement rate -->
+                <td class="text-right px-3 py-2">4.1%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">470</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">0.22%</td>
+                <!-- Revenue -->
+                <td class="text-right px-3 py-2">$3,520</td>
+                <!-- Costs -->
+                <td class="text-right px-3 py-2">$1,500</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2">2.35x</td>
+              <!-- End of row -->
+              </tr>
+              <!-- Pinterest row -->
+              <tr>
+                <!-- Platform name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Pinterest</th>
+                <!-- Reach -->
+                <td class="text-right px-3 py-2">100K</td>
+                <!-- Interactions -->
+                <td class="text-right px-3 py-2">2.2K</td>
+                <!-- Engagement rate -->
+                <td class="text-right px-3 py-2">2.2%</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">150</td>
+                <!-- Conversion rate -->
+                <td class="text-right px-3 py-2">0.15%</td>
+                <!-- Revenue -->
+                <td class="text-right px-3 py-2">$950</td>
+                <!-- Costs -->
+                <td class="text-right px-3 py-2">$600</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2">1.58x</td>
+              <!-- End of row -->
+              </tr>
+            <!-- End of body -->
+            </tbody>
+            <!-- Footer with thick top border and small text -->
+            <tfoot class="border-t-2 border-gray-200 text-xs">
+              <!-- "Best" row highlighted with a light indigo background and indigo bold text -->
+              <tr class="bg-indigo-50 text-indigo-700 font-semibold">
+                <!-- Row label -->
+                <th scope="row" class="text-left px-3 py-2">Best</th>
+                <!-- Highest reach -->
+                <td class="text-right px-3 py-2">Instagram</td>
+                <!-- Most interactions -->
+                <td class="text-right px-3 py-2">Instagram</td>
+                <!-- Highest engagement rate -->
+                <td class="text-right px-3 py-2">TikTok</td>
+                <!-- Most conversions -->
+                <td class="text-right px-3 py-2">Instagram</td>
+                <!-- Highest conversion rate -->
+                <td class="text-right px-3 py-2">YouTube</td>
+                <!-- Highest revenue -->
+                <td class="text-right px-3 py-2">Instagram</td>
+                <!-- Lowest cost -->
+                <td class="text-right px-3 py-2">Pinterest</td>
+                <!-- Best ROAS -->
+                <td class="text-right px-3 py-2">TikTok</td>
+              <!-- End of "Best" row -->
+              </tr>
+            <!-- End of footer -->
+            </tfoot>
+          <!-- End of table -->
+          </table>
+        <!-- End of scroll wrapper -->
+        </div>
+      <!-- End of platforms card -->
+      </article>
+
+      <!-- CAMPAIGNS TABLE card -->
+      <article class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <!-- Title area -->
+        <div class="p-5 pb-0">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Campaigns</h3>
+          <!-- Note -->
+          <p class="text-xs text-gray-400">Results attributed through tracked links and codes</p>
+        <!-- End of title area -->
+        </div>
+        <!-- Scroll wrapper -->
+        <div class="overflow-x-auto p-5">
+          <!-- Table -->
+          <table class="w-full text-sm whitespace-nowrap">
+            <!-- Header -->
+            <thead class="text-xs text-gray-500 uppercase bg-gray-50">
+              <!-- Header row -->
+              <tr>
+                <!-- Column: campaign name -->
+                <th scope="col" class="text-left px-3 py-2">Campaign</th>
+                <!-- Column: start – end dates -->
+                <th scope="col" class="text-left px-3 py-2">Dates</th>
+                <!-- Column: product promoted -->
+                <th scope="col" class="text-left px-3 py-2">Product</th>
+                <!-- Column: platforms used -->
+                <th scope="col" class="text-left px-3 py-2">Platforms</th>
+                <!-- Column: conversions -->
+                <th scope="col" class="text-right px-3 py-2">Conversions</th>
+                <!-- Column: commissions -->
+                <th scope="col" class="text-right px-3 py-2">Commissions</th>
+                <!-- Column: cost -->
+                <th scope="col" class="text-right px-3 py-2">Cost</th>
+                <!-- Column: ROAS -->
+                <th scope="col" class="text-right px-3 py-2">ROAS</th>
+                <!-- Column: status label -->
+                <th scope="col" class="text-left px-3 py-2">Status</th>
+              <!-- End of header row -->
+              </tr>
+            <!-- End of header -->
+            </thead>
+            <!-- Body -->
+            <tbody class="divide-y divide-gray-100">
+              <!-- Glow Up Fall row -->
+              <tr>
+                <!-- Campaign name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Glow Up Fall</th>
+                <!-- Dates in gray -->
+                <td class="px-3 py-2 text-gray-500">Sep 15 – Oct 5</td>
+                <!-- Product -->
+                <td class="px-3 py-2">Glow Serum</td>
+                <!-- Platforms -->
+                <td class="px-3 py-2">Instagram, TikTok</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">760</td>
+                <!-- Commissions -->
+                <td class="text-right px-3 py-2">$5,700</td>
+                <!-- Cost -->
+                <td class="text-right px-3 py-2">$1,400</td>
+                <!-- ROAS (bold) -->
+                <td class="text-right px-3 py-2 font-semibold">4.07x</td>
+                <!-- Green status pill -->
+                <td class="px-3 py-2"><span class="bg-green-100 text-green-700 rounded-full px-2 py-0.5 text-xs font-semibold">Outperforming</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Morning Flow row (same column order) -->
+              <tr>
+                <!-- Campaign name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Morning Flow</th>
+                <!-- Dates -->
+                <td class="px-3 py-2 text-gray-500">Sep 14 – Oct 14</td>
+                <!-- Product -->
+                <td class="px-3 py-2">Yoga Mat Pro</td>
+                <!-- Platforms -->
+                <td class="px-3 py-2">TikTok</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">410</td>
+                <!-- Commissions -->
+                <td class="text-right px-3 py-2">$2,460</td>
+                <!-- Cost -->
+                <td class="text-right px-3 py-2">$800</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2 font-semibold">3.08x</td>
+                <!-- Blue "On track" pill -->
+                <td class="px-3 py-2"><span class="bg-sky-100 text-sky-700 rounded-full px-2 py-0.5 text-xs font-semibold">On track</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Bold Lips Drop row -->
+              <tr>
+                <!-- Campaign name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Bold Lips Drop</th>
+                <!-- Dates -->
+                <td class="px-3 py-2 text-gray-500">Oct 1 – Oct 10</td>
+                <!-- Product -->
+                <td class="px-3 py-2">Matte Lipstick Set</td>
+                <!-- Platforms -->
+                <td class="px-3 py-2">Instagram</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">300</td>
+                <!-- Commissions -->
+                <td class="text-right px-3 py-2">$1,500</td>
+                <!-- Cost -->
+                <td class="text-right px-3 py-2">$500</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2 font-semibold">3.00x</td>
+                <!-- Blue "On track" pill -->
+                <td class="px-3 py-2"><span class="bg-sky-100 text-sky-700 rounded-full px-2 py-0.5 text-xs font-semibold">On track</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Sound On Week row -->
+              <tr>
+                <!-- Campaign name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Sound On Week</th>
+                <!-- Dates -->
+                <td class="px-3 py-2 text-gray-500">Sep 20 – Sep 30</td>
+                <!-- Product -->
+                <td class="px-3 py-2">Wireless Earbuds</td>
+                <!-- Platforms -->
+                <td class="px-3 py-2">YouTube</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">210</td>
+                <!-- Commissions -->
+                <td class="text-right px-3 py-2">$2,520</td>
+                <!-- Cost -->
+                <td class="text-right px-3 py-2">$900</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2 font-semibold">2.80x</td>
+                <!-- Blue "On track" pill -->
+                <td class="px-3 py-2"><span class="bg-sky-100 text-sky-700 rounded-full px-2 py-0.5 text-xs font-semibold">On track</span></td>
+              <!-- End of row -->
+              </tr>
+              <!-- Fuel Up row -->
+              <tr>
+                <!-- Campaign name -->
+                <th scope="row" class="text-left font-medium px-3 py-2">Fuel Up</th>
+                <!-- Dates -->
+                <td class="px-3 py-2 text-gray-500">Sep 25 – Oct 14</td>
+                <!-- Product -->
+                <td class="px-3 py-2">Protein Blend</td>
+                <!-- Platforms -->
+                <td class="px-3 py-2">Pinterest, YouTube</td>
+                <!-- Conversions -->
+                <td class="text-right px-3 py-2">120</td>
+                <!-- Commissions -->
+                <td class="text-right px-3 py-2">$947</td>
+                <!-- Cost -->
+                <td class="text-right px-3 py-2">$650</td>
+                <!-- ROAS -->
+                <td class="text-right px-3 py-2 font-semibold">1.46x</td>
+                <!-- Red "Underperforming" pill -->
+                <td class="px-3 py-2"><span class="bg-red-100 text-red-700 rounded-full px-2 py-0.5 text-xs font-semibold">Underperforming</span></td>
+              <!-- End of row -->
+              </tr>
+            <!-- End of body -->
+            </tbody>
+          <!-- End of table -->
+          </table>
+        <!-- End of scroll wrapper -->
+        </div>
+      <!-- End of campaigns card -->
+      </article>
+
+      <!-- FILTERED LISTS grid (the tabs are visual only): 1/2/4 columns depending on screen size -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+
+        <!-- Top products card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Top products</h3>
+          <!-- Tab row: flex puts the tabs side by side; gap-1 = small space -->
+          <div class="mt-3 flex gap-1 text-xs">
+            <!-- Active tab: dark background, white text, slightly rounded -->
+            <span class="px-2 py-1 rounded-md bg-gray-900 text-white">Revenue</span>
+            <!-- Inactive tab: light gray background, gray text -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Conversion</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Engagement</span>
+          <!-- End of tab row -->
+          </div>
+          <!-- Ranked (ordered) list -->
+          <ol class="mt-4 space-y-3 text-sm">
+            <!-- Rank 1: gray rank number + name on the left, bold value on the right -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">1</span>Glow Serum</span><span class="font-semibold">$6,900</span></li>
+            <!-- Rank 2 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">2</span>Wireless Earbuds</span><span class="font-semibold">$4,560</span></li>
+            <!-- Rank 3 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">3</span>Yoga Mat Pro</span><span class="font-semibold">$3,240</span></li>
+          <!-- End of list -->
+          </ol>
+        <!-- End of card -->
+        </article>
+
+        <!-- Top platforms card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Top platforms</h3>
+          <!-- Tab row -->
+          <div class="mt-3 flex gap-1 text-xs">
+            <!-- Active tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-900 text-white">ROAS</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Revenue</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Engagement</span>
+          <!-- End of tab row -->
+          </div>
+          <!-- Ranked list -->
+          <ol class="mt-4 space-y-3 text-sm">
+            <!-- Rank 1 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">1</span>TikTok</span><span class="font-semibold">3.73x</span></li>
+            <!-- Rank 2 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">2</span>Instagram</span><span class="font-semibold">3.25x</span></li>
+            <!-- Rank 3 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">3</span>YouTube</span><span class="font-semibold">2.35x</span></li>
+          <!-- End of list -->
+          </ol>
+        <!-- End of card -->
+        </article>
+
+        <!-- Top campaigns card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Top campaigns</h3>
+          <!-- Tab row -->
+          <div class="mt-3 flex gap-1 text-xs">
+            <!-- Active tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-900 text-white">ROAS</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Conversions</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Revenue</span>
+          <!-- End of tab row -->
+          </div>
+          <!-- Ranked list -->
+          <ol class="mt-4 space-y-3 text-sm">
+            <!-- Rank 1 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">1</span>Glow Up Fall</span><span class="font-semibold">4.07x</span></li>
+            <!-- Rank 2 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">2</span>Morning Flow</span><span class="font-semibold">3.08x</span></li>
+            <!-- Rank 3 -->
+            <li class="flex justify-between"><span><span class="text-gray-400 mr-2">3</span>Bold Lips Drop</span><span class="font-semibold">3.00x</span></li>
+          <!-- End of list -->
+          </ol>
+        <!-- End of card -->
+        </article>
+
+        <!-- Improvement opportunities card -->
+        <article class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+          <!-- Card title -->
+          <h3 class="font-semibold text-gray-900">Improvement opportunities</h3>
+          <!-- Tab row -->
+          <div class="mt-3 flex gap-1 text-xs">
+            <!-- Active tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-900 text-white">All</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Platforms</span>
+            <!-- Inactive tab -->
+            <span class="px-2 py-1 rounded-md bg-gray-100 text-gray-600">Products</span>
+          <!-- End of tab row -->
+          </div>
+          <!-- Unordered list (no ranking) -->
+          <ul class="mt-4 space-y-3 text-sm">
+            <!-- Item: bold subject + gray recommendation -->
+            <li><span class="font-medium">Pinterest</span> <span class="text-gray-500">— lowest ROAS (1.58x); shift budget to TikTok</span></li>
+            <!-- Item -->
+            <li><span class="font-medium">Protein Blend</span> <span class="text-gray-500">— 5.0% conversion; test a new hook or offer</span></li>
+            <!-- Item -->
+            <li><span class="font-medium">YouTube</span> <span class="text-gray-500">— 4.1% engagement; post more Shorts</span></li>
+          <!-- End of list -->
+          </ul>
+        <!-- End of card -->
+        </article>
+
+      <!-- End of filtered lists grid -->
+      </div>
+    <!-- End of block 3 -->
+    </section>
+    </details>
+
+  <!-- End of main content -->
+  </main>
+
+  <!-- Footer: centered, padded, tiny light gray text, top border line -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-xs text-gray-400 border-t border-gray-200">
+    <!-- Footer text: data disclaimer and metric formulas -->
+    Mock data for demonstration · Conversion rate = conversions / reach · ROAS = revenue / costs · Engagement rate = interactions / reach
+  <!-- End of footer -->
+  </footer>
+
+<!-- End of the visible page -->
+</body>
+<!-- End of the HTML document -->
+</html>
